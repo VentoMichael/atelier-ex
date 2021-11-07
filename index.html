@@ -6,15 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="resources/css/style.css">
-    <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <title>Figma exemple</title>
+    <link rel="icon" type="image/png" href="resources/img/favicon.png"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Solarly | Accueil</title>
 </head>
 <body>
 <header>
     <h1 aria-level="1" class="hidden">
-        Figma exemple
+        Solarly | Accueil
     </h1>
     <nav>
         <h2 class="hidden">
@@ -113,7 +112,7 @@
                     <li class="item__nav"><a href="#">Impact</a></li>
                     <li class="item__nav"><a href="#">Actualités</a></li>
                     <li class="item__nav"><a href="#">FAQ</a></li>
-                    <li class="item__nav"><a href="#">Contact</a></li>
+                    <li class="item__nav raise"><a href="#">Contact</a></li>
                 </ul>
                 </div>
             </div>
@@ -124,9 +123,10 @@
     <section class="container__intro">
         <div class="container__img__intro">
             <picture>
-                <source media="(max-width: 899px)" srcset="resources/img/header__small.png">
-                <source media="(min-width: 900px)" srcset="resources/img/header_ex.png">
-                <img src="resources/img/header_ex.png" alt="Personne se tenant avec un panneau solaire">
+                <source media="(max-width: 899px)" srcset="resources/img/header__small.webp">
+                <source media="(min-width: 1300px)" srcset="resources/img/header__big.webp">
+                <source media="(min-width: 900px)" srcset="resources/img/header_ex.webp">
+                <img src="resources/img/header_ex.webp" alt="Personne se tenant avec un panneau solaire">
             </picture>
         </div>
         <div class="container__content__intro">
@@ -138,18 +138,18 @@
                 l'électricité. Nous avons donc développé des systèmes solaires connectés, abordables et durables pour
                 les ménages, les entreprises et les lieux communautaires.
             </p>
-            <a href="#" class="btn__discover">
-                Découvrez nos kits solaires
+            <a href="#" class="raise btn__discover">
+                <span>Découvrez nos kits solaires</span>
             </a>
         </div>
     </section>
     <div class="container__arrow_down">
-        <button class="arrow__down__btn">
-        </button>
+        <a href="#" class="arrow__down__btn">
+        </a>
     </div>
     <section class="about">
         <div class="container__img__about">
-            <img src="resources/img/about__img.jpg" alt="Personne montrant une ampoule allumée">
+            <img src="resources/img/about__img.webp" alt="Personne montrant une ampoule allumée">
         </div>
         <div class="container__about">
             <h2 class="title__about" aria-level="2">
@@ -164,8 +164,8 @@
                     toutes les régions du Cameroun. Ensemble, nous sommes sortis des sentiers battus pour développer et
                     distribuer des solutions adaptées aux réalités du terrain et répondre ainsi à un besoin primordial.
                 </p>
-                <a href="#" class="btn__discover">
-                    Notre histoire
+                <a href="#" class="raise btn__discover">
+                    <span>Notre histoire</span>
                 </a>
             </section>
         </div>
@@ -190,41 +190,18 @@
                 <div class="swiper-button-prev"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <a href="#" class="btn__discover btn__more">
-                En savoir plus
+            <a href="#" class="raise btn__discover btn__more">
+                <span>En savoir plus</span>
             </a>
         </div>
         <div class="container__img__product">
-            <img src="resources/img/product.png" alt="Produit solarly">
+            <img src="resources/img/product.webp" alt="Produit solarly">
         </div>
     </section>
 </main>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
-<script>
-    let menu = document.getElementById('menulabel')
-    menu.addEventListener('click', () => {
-        document.querySelector('.container__list__nav').classList.toggle('is__active')
-        document.querySelector('.container__nav__items').classList.toggle('is__active')
-        document.querySelector('.container__label__navigation').classList.toggle('is__active')
-        if (menu.innerHTML === "Menu") {
-            menu.innerHTML = "Close";
-        } else {
-            menu.innerHTML = "Menu";
-        }
-    })
+<script>var swiper=new Swiper(".mySwiper",{pagination:{el:".swiper-pagination",type:"fraction"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});</script>
+<script src="resources/js/menu.js">
 </script>
 </body>
 </html>
